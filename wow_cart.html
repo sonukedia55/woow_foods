@@ -1,0 +1,43 @@
+<?php
+$choice=1;
+if(isset($_POST['add'])){
+	$choice = $_POST['price'];
+	if($choice==1) $sum=+200;
+	if($choice==2) $sum=+100;
+	if($choice==3) $sum=+100;
+	if($choice==4) $sum=+50;
+	if($choice==5) $sum=+50;
+	
+	}
+
+?>
+<!doctype html>
+
+<html>
+<head><title>your-cart</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body bgcolor="lightblue">
+
+<img src="back2.png" style="padding-left:1%;width:98%; height:145px;"/>
+<div class="head1" style="background-color:white; margin-left:10%;margin-right:10%;margin-top:-40px;"><br><br>
+<div class="left1" style="width:30%; background-color:lightgreen;min-height:700px;margin-top:-40px;">
+	<br></br><h1 align="center"><u>YOUR CART</u></h1><br></br><img src="cart.png" align="center" style="margin-left:28%;"><br></br><?php echo $sum;?>
+
+</div>
+<div class="left1" style="width:70%;min-height:660px;background-color:white; ">
+	<h2 align="center">....WOW Items.....<br>....Select Your Choice...</h2><br></br><hr style="width:80%; margin-left:10%;"/><hr style="width:80%; margin-left:10%;"/><br>
+	<table style="border:none;text-align:center;margin-left:10%;">
+		<tr><td><img src="pizza.jpg"/></td><td>pizza<br>200/-</td><td><form action="wow_cart.php" method="post"><input name="price" type="text" value="1" type="hidden"/><input value="Add to cart" type="submit" name="add"/></form></td></tr>
+		<tr><td><img src="chowmin.jpg"/></td><td>chowmin<br/>100/-</td><td><form action="wow_cart.php" method="post"><input name="price" type="text" value="2" type="hidden"/><input value="Add to cart" type="submit" name="add"/></form></td></tr>
+		<tr><td><img src="ice.jpg"/></td><td>ice cream<br/>100/-</td><td><form action="wow_cart.php" method="post"><input name="price" type="text" value="3" type="hidden"/><input value="Add to cart" type="submit" name="add"/></form></td></tr>
+		<tr><td><img src="burger.jpg"/></td><td>burger<br/>50/-</td><td><form action="wow_cart.php" method="post"><input name="price" type="text" value="4" type="hidden"/><input value="Add to cart" type="submit" name="add"/></form></td></tr>
+		<tr><td><img src="franch.png"/></td><td>franch fries<br/>50/-</td><td><form action="wow_cart.php" method="post"><input name="price" type="text" value="5" type="hidden"/><input value="Add to cart" type="submit" name="add"/></form></td></tr>
+	
+	
+	</table>
+
+</div>
+</div>
+</body>
+</html>
