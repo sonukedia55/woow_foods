@@ -3,7 +3,7 @@ $con = mysqli_connect("localhost","root","","wow");
 if(isset($_POST['shop'])){
 	$let=0;
 }
-
+//all is well
 
 if(isset($_POST['login'])){
 $let=0;
